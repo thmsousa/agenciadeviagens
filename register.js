@@ -5,10 +5,12 @@ const password = document.getElementById('password')
 const passwordtwo = document.getElementById('password-two')
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault()
-
-    checkInputs()
-})
+    e.preventDefault();
+    if (checkInputs()) {
+      // Se a validação dos campos estiver correta, o usuário será redirecionado para a página Pacotes.
+      window.location.href = 'pacotes.html';
+    }
+  });
 
 function checkInputs() {
 
@@ -19,8 +21,8 @@ function checkInputs() {
 
     if(usernameValue === '') {
         // mostrar erro
-        // add classe
         setErrorFor(username, 'Preencha esse campo')
+        return false;
     } else {
         // adicionar a classe de sucesso
         setSuccessFor(username)
@@ -28,10 +30,11 @@ function checkInputs() {
 
     if(emailValue === '') {
         // mostrar erro
-        // add classe
         setErrorFor(email, 'Preencha esse campo')
+        return false;
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'Email inválido')
+        return false;
     } else {
         // adicionar a classe de sucesso
         setSuccessFor(email)
@@ -39,11 +42,12 @@ function checkInputs() {
    
     if(passwordValue === '') {
         // mostrar erro
-        // add classe
-        setErrorFor(password, 'Preencha esse campo')
+        setErrorFor(password, 'Preencha esse campo.')
+        return false;
 
     } else if(passwordValue.length < 8) { 
-        setErrorFor(password, 'Senha deve ter mais que 8 caracteres')
+        setErrorFor(password, 'Senha deve ter mais que 8 caracteres.')
+        return false;
     } else {
         // adicionar a classe de sucesso
         setSuccessFor(password)
@@ -52,14 +56,18 @@ function checkInputs() {
     if(passwordtwoValue === '') {
         // mostrar erro
         // add classe
-        setErrorFor(passwordtwo, 'Preencha esse campo')
+        setErrorFor(passwordtwo, 'Preencha esse campo.')
+        return false;
 
     } else if(passwordValue !== passwordtwoValue) { 
-        setErrorFor(passwordtwo, 'Senhas não tão iguais')
+        setErrorFor(passwordtwo, 'Senhas não estão iguais.')
+        return false;
     } else {
         // adicionar a classe de sucesso
         setSuccessFor(passwordtwo)
     }
+
+    return emailValue !== '' && isEmail(emailValue) && passwordValue !== '' && passwordValue.length >= 8;
 
 }
 

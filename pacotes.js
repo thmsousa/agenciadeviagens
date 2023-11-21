@@ -39,3 +39,13 @@ function calcularCusto(precoId, destinationId, stayDurationId, numPeopleId, acco
     // Atualiza o elemento HTML com o resultado
     document.getElementById(precoId).textContent = `Custo Total: $${custoTotal}`;
 }
+
+
+logoutButton.addEventListener('click', function() {
+    // Logout (limpa os dados de autenticação)
+
+    document.cookie = 'loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+
+    // Redireciona para a página de login após o logout.
+    window.location.href = 'login.html';
+});

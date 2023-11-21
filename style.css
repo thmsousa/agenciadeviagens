@@ -340,7 +340,7 @@ button img {
 .container2 {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
+  border: 2px solid;
   width: 50%;
   margin: 0 auto;
   margin-top: 5px;
@@ -353,7 +353,7 @@ button img {
 .headerreg h2 {
   font-weight: 600;
   color:#0011fc;
-  font-size: 22px;
+  font-size: 19px;
 }
 
 .form {
@@ -449,7 +449,7 @@ button img {
 .container3 {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
+  border: 2px solid;
   width: 50%;
   margin: 0 auto;
   margin-top: 70px;
@@ -484,7 +484,7 @@ button img {
 }
 
 .form-control input {
-  border: 2px solid #000000;
+  border: 2px solid #0011fc;
   background-color: #f0f0f0;
   border-radius: 7px;
   display: block;
@@ -496,8 +496,12 @@ button img {
 }
 
 .form-control h4 {
-  color:#000000;
+  color:#0011fc;
   float: right;
+}
+
+.form-control a {
+  color:#0011fc;
 }
 
 .form-control.success input {
@@ -563,7 +567,6 @@ button img {
 .containerPAR {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #070707;
   width: 30%;
   margin: 10px;
   display: inline-block;
@@ -625,7 +628,6 @@ button img {
 .containerNY {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
   width: 30%;
   margin: 10px;
   margin-left: 25px;
@@ -689,7 +691,6 @@ button img {
 .containerATE {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
   width: 30%;
   margin: 10px;
   margin-left: 25px;
@@ -760,7 +761,6 @@ button img {
 .containerBAN {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #070707;
   width: 30%;
   margin: 10px;
   margin-top: 40px;
@@ -823,7 +823,6 @@ button img {
 .containerBER {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
   width: 30%;
   margin: 10px;
   margin-top: 40px;
@@ -888,7 +887,6 @@ button img {
 .containerCAI {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
   width: 30%;
   margin: 10px;
   margin-left: 25px;
@@ -959,7 +957,6 @@ button img {
 .containerLON {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #070707;
   width: 30%;
   margin: 10px;
   margin-top: 40px;
@@ -1022,7 +1019,6 @@ button img {
 .containerROM {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
   width: 30%;
   margin: 10px;
   margin-top: 40px;
@@ -1087,7 +1083,6 @@ button img {
 .containerSHA {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
   width: 30%;
   margin: 10px;
   margin-left: 25px;
@@ -1158,7 +1153,6 @@ button img {
 .containerTOK {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #070707;
   width: 30%;
   margin: 10px;
   margin-top: 40px;
@@ -1220,7 +1214,6 @@ button img {
 .containerDUB {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
   width: 30%;
   margin: 10px;
   margin-top: 40px;
@@ -1284,7 +1277,6 @@ button img {
 .containerCUS {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid #000000;
   width: 30%;
   margin: 10px;
   margin-left: 25px;

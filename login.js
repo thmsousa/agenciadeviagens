@@ -1,12 +1,14 @@
-const form = document.getElementById('form')
-const email = document.getElementById('email')
-const password = document.getElementById('password')
+const form = document.getElementById('form');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault()
-
-    checkInputs()
-})
+  e.preventDefault();
+  if (checkInputs()) {
+    // Se a validação dos campos estiver correta, redirecione para a página desejada
+    window.location.href = 'pacotes.html';
+  }
+});
 
 function checkInputs() {
 
@@ -16,10 +18,11 @@ function checkInputs() {
 
     if(emailValue === '') {
         // mostrar erro
-        // add classe
         setErrorFor(email, 'Preencha esse campo')
+        return false;
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'E-mail inválido')
+        return false;
     } else {
         // adicionar a classe de sucesso
         setSuccessFor(email)
@@ -27,17 +30,24 @@ function checkInputs() {
    
     if(passwordValue === '') {
         // mostrar erro
-        // add classe
-        setErrorFor(password, 'Preencha esse campo')
 
+        setErrorFor(password, 'Preencha esse campo')
+        return false;
     } else if(passwordValue.length < 8) { 
         setErrorFor(password, 'Senha deve ter mais que 8 caracteres')
+        return false;
     } else {
         // adicionar a classe de sucesso
         setSuccessFor(password)
     }
 
+
+    // Retorne true se todos os campos estiverem corretos
+    return emailValue !== '' && isEmail(emailValue) && passwordValue !== '' && passwordValue.length >= 8;
+    
 }
+
+
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
