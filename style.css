@@ -22,7 +22,7 @@ a {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url(/imgs/background.jpg) no-repeat fixed center;
+  background: url(background.jpg) no-repeat fixed center;
   background-size: cover;
   color: var(--color-text);
   max-width: 1080px;
