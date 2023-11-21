@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+          <div class="logo">
+            <img src="imgs/plane-icon.svg" alt="">
+            <h3>TravelWorld</h3>
+          </div>
+    
+          <div class="menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="pacotes.html">Pacotes</a></li>
+              <li><a href="about.html">Sobre</a></li>
+              
+            </ul>
+          </div>
+    
+          <div class="button">
+            <button>
+              <a href="register.html">Cadastro</a>
+            </button>
+          </div>
+        </header>
+    </div>
+
+      <main>
+        <div class="top-main">
+          <div class="title">
+            <h1 id= "pacoteTitle">
+              Pacotes disponíveis
+            </h1>
+          </div>
+        </div>
+      </main>
+
+      <div class="containerPAR">
+        <img src="imgs/carrossel_paris.jpg" width="100%" height="250px" alt="Paris">
+        <label for="destination">Destino:</label>
+        <select id="destination1">
+            <option value="paris">Paris</option>
+        </select>
+
+        <label for="stay-duration">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration1" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people">Número de Pessoas:</label>
+        <input type="number" id="num-people1" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation1">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+        <button onclick="calcularCusto('preco1', 'destination1', 'stay-duration1', 'num-people1', 'accommodation1')">Calcular</button>
+        <div id="preco1">Custo Total: $0</div>
+      </div>
+   
+      <div class="containerNY">
+        <img src="imgs/pacote_NY.jpg" width="100%" height="250px" alt="Nova Iorque">
+        <label for="destination">Destino:</label>
+        <select id="destination2">
+            <option value="newyork">Nova York</option>
+        </select>
+
+        <label for="stay-duration2">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration2" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people2">Número de Pessoas:</label>
+        <input type="number" id="num-people2" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation2">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco2', 'destination2', 'stay-duration2', 'num-people2', 'accommodation2')">Calcular</button>
+        <div id="preco2">Custo Total: $0</div>
+
+      </div>
+
+      <div class="containerATE">
+        <img src="imgs/pacote_atenas.jpg" width="100%" height="250px" alt="Atenas">
+        <label for="destination">Destino:</label>
+        <select id="destination3">
+            <option value="atenas">Atenas</option>
+        </select>
+
+        <label for="stay-duration3">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration3" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people3">Número de Pessoas:</label>
+        <input type="number" id="num-people3" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation3">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco3', 'destination3', 'stay-duration3', 'num-people3', 'accommodation3')">Calcular</button>
+        <div id="preco3">Custo Total: $0</div>
+
+      </div>
+
+      <div class="containerBAN">
+        <img src="imgs/pacote_bangkok.jpg" width="100%" height="250px" alt="Bangkok">
+        <label for="destination">Destino:</label>
+        <select id="destination4">
+            <option value="bangkok">Bangkok</option>
+        </select>
+
+        <label for="stay-duration">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration4" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people">Número de Pessoas:</label>
+        <input type="number" id="num-people4" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation4">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+        <button onclick="calcularCusto('preco4', 'destination4', 'stay-duration4', 'num-people4', 'accommodation4')">Calcular</button>
+        <div id="preco4">Custo Total: $0</div>
+      </div>
+   
+      <div class="containerBER">
+        <img src="imgs/pacote_berlin.jpg" width="100%" height="250px" alt="Berlim">
+        <label for="destination">Destino:</label>
+        <select id="destination5">
+            <option value="newyork">Berlim</option>
+        </select>
+
+        <label for="stay-duration5">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration5" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people5">Número de Pessoas:</label>
+        <input type="number" id="num-people5" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation5">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco5', 'destination5', 'stay-duration5', 'num-people5', 'accommodation5')">Calcular</button>
+        <div id="preco5">Custo Total: $0</div>
+
+      </div>
+
+      <div class="containerCAI">
+        <img src="imgs/pacote_cairo.jpg" width="100%" height="250px" alt="Cairo">
+        <label for="destination">Destino:</label>
+        <select id="destination6">
+            <option value="cairo">Cairo</option>
+        </select>
+
+        <label for="stay-duration6">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration6" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people6">Número de Pessoas:</label>
+        <input type="number" id="num-people6" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation6">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco6', 'destination6', 'stay-duration6', 'num-people6', 'accommodation6')">Calcular</button>
+        <div id="preco6">Custo Total: $0</div>
+
+      </div>
+
+      <div class="containerLON">
+        <img src="imgs/pacote_london.jpg" width="100%" height="250px" alt="Londres">
+        <label for="destination">Destino:</label>
+        <select id="destination7">
+            <option value="london">Londres</option>
+        </select>
+
+        <label for="stay-duration7">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration7" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people7">Número de Pessoas:</label>
+        <input type="number" id="num-people7" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation7">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco7', 'destination7', 'stay-duration7', 'num-people7', 'accommodation7')">Calcular</button>
+        <div id="preco7">Custo Total: $0</div>
+
+      </div>
+
+      <div class="containerROM">
+        <img src="imgs/pacote_roma.jpg" width="100%" height="250px" alt="Roma">
+        <label for="destination">Destino:</label>
+        <select id="destination8">
+            <option value="roma">Roma</option>
+        </select>
+
+        <label for="stay-duration8">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration8" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people8">Número de Pessoas:</label>
+        <input type="number" id="num-people8" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation8">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco8', 'destination8', 'stay-duration8', 'num-people8', 'accommodation8')">Calcular</button>
+        <div id="preco8">Custo Total: $0</div>
+
+      </div>
+
+      <div class="containerSHA">
+        <img src="imgs/pacote_shanghai.jpg" width="100%" height="250px" alt="Shanghai">
+        <label for="destination">Destino:</label>
+        <select id="destination9">
+            <option value="shanghai">Shanghai</option>
+        </select>
+
+        <label for="stay-duration9">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration9" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people9">Número de Pessoas:</label>
+        <input type="number" id="num-people9" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation9">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco9', 'destination9', 'stay-duration9', 'num-people9', 'accommodation9')">Calcular</button>
+        <div id="preco9">Custo Total: $0</div>
+
+      </div>
+
+      <div class="containerTOK">
+        <img src="imgs/carrossel_tokyo.jpg" width="100%" height="250px" alt="Tokyo">
+        <label for="destination">Destino:</label>
+        <select id="destination10">
+            <option value="tokyo">Tóquio</option>
+        </select>
+
+        <label for="stay-duration10">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration10" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people10">Número de Pessoas:</label>
+        <input type="number" id="num-people10" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation10">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco10', 'destination10', 'stay-duration10', 'num-people10', 'accommodation10')">Calcular</button>
+        <div id="preco10">Custo Total: $0</div>
+
+      </div>
+
+      <div class="containerDUB">
+        <img src="imgs/pacote_dubai.jpg" width="100%" height="250px" alt="Dubai">
+        <label for="destination">Destino:</label>
+        <select id="destination11">
+            <option value="dubai">Dubai</option>
+        </select>
+
+        <label for="stay-duration11">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration11" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people11">Número de Pessoas:</label>
+        <input type="number" id="num-people11" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation11">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco11', 'destination11', 'stay-duration11', 'num-people11', 'accommodation11')">Calcular</button>
+        <div id="preco11">Custo Total: $0</div>
+
+      </div>
+
+      <div class="containerCUS">
+        <img src="imgs/pacote_cusco.jpg" width="100%" height="250px" alt="Cusco">
+        <label for="destination">Destino:</label>
+        <select id="destination12">
+            <option value="cusco">Cusco</option>
+        </select>
+
+        <label for="stay-duration12">Duração da Estadia (em dias):</label>
+        <input type="number" id="stay-duration12" min="1" placeholder="Insira a quantidade de dias.">
+
+        <label for="num-people12">Número de Pessoas:</label>
+        <input type="number" id="num-people12" min="1" placeholder="Insira a quantidade de pessoas.">
+
+        <label for="accommodation">Tipo de Acomodação:</label>
+        <select id="accommodation12">
+            <option value="hotel">Hotel</option>
+            <option value="apartment">Apartamento</option>
+        </select>
+
+        <button onclick="calcularCusto('preco12', 'destination12', 'stay-duration12', 'num-people12', 'accommodation12')">Calcular</button>
+        <div id="preco12">Custo Total: $0</div>
+
+      </div>
+      
+
+    <script src="pacotes.js"></script>
+    
+  </body>
+</html>
