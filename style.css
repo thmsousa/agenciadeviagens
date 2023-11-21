@@ -22,7 +22,7 @@ a {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: url(./background.jpg) no-repeat fixed center;
+  background: url(./imgs/background.jpg) no-repeat fixed center;
   background-size: cover;
   color: var(--color-text);
   max-width: 1080px;
@@ -1353,7 +1353,6 @@ button img {
 
 /* SOBRE E CONTATO */
 
-
 .headerabout {
   justify-content: center;
   text-align: center;
@@ -1362,7 +1361,6 @@ button img {
   font-weight: 400;
   font-size: 15px;
 }
-
 
 .mainabout {
   flex: 1;
