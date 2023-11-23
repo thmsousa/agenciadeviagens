@@ -1,9 +1,9 @@
 // <----- CARROSSEL DE IMAGENS (HOMEPAGE) ----->
 
-// setInterval para as imagens passarem infinitamente.
 let count = 1;
 document.getElementById("radio1").checked = true;
 
+// setInterval para as imagens passarem infinitamente.
 setInterval(function() {
     nextImage();
 }, 4000)
@@ -17,4 +17,3 @@ function nextImage(){
     
     document.getElementById("radio" + count).checked = true;
 }
-

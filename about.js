@@ -4,8 +4,8 @@ const imagemCompartilhar = document.getElementById('imagem-compartilhar');
       imagemCompartilhar.addEventListener('click', async () => {
         try {
           await navigator.share({
-            title: 'Título do conteúdo a ser compartilhado',
-            text: 'Texto do conteúdo a ser compartilhado',
+            title: 'Mundo Fronteira',
+            text: 'Mundo Fronteira.',
             url: 'https://about.html',
           });
           console.log('Compartilhado feito com sucesso!');

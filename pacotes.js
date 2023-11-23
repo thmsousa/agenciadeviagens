@@ -1,3 +1,13 @@
+// verificação de autenticação.
+const verificarAutenticacao = localStorage.getItem('verificarAutenticacao');
+
+if (!verificarAutenticacao) {
+    // Se não estiver autenticado, redirecionar para a página de login/cadastro.
+    window.location.href = 'register.html';
+    alert('Você precisa estar logado para acessar esse conteúdo.');
+}
+
+// Função para calcular o custo da viagem.
 function calcularCusto(precoId, destinationId, stayDurationId, numPeopleId, accommodationId) {
 
     const destination = document.getElementById(destinationId).value;
@@ -5,7 +15,7 @@ function calcularCusto(precoId, destinationId, stayDurationId, numPeopleId, acco
     const numPeople = parseInt(document.getElementById(numPeopleId).value);
     const accommodation = document.getElementById(accommodationId).value;
 
-    // Mapeamento de destinos para preços base
+    // Valores base dos destinos.
     const precosBase = {
         paris: 1500,
         newyork: 1300,
@@ -19,7 +29,6 @@ function calcularCusto(precoId, destinationId, stayDurationId, numPeopleId, acco
         tokyo: 1370,
         dubai: 2000,
         cusco: 1445,
-
     };
 
     // Lógica de cálculo do preço base
@@ -36,16 +45,16 @@ function calcularCusto(precoId, destinationId, stayDurationId, numPeopleId, acco
     // Cálculo do custo total
     const custoTotal = precoBase * stayDuration * numPeople;
 
-    // Atualiza o elemento HTML com o resultado
+    // Atualiza a página com o custo final.
     document.getElementById(precoId).textContent = `Custo Total: $${custoTotal}`;
 }
 
+// Remoção/Limpeza para os dados de login. (logout)
+const logoutButton = document.getElementById('logoutButton');
 
 logoutButton.addEventListener('click', function() {
-    // Logout (limpa os dados de autenticação)
+    localStorage.removeItem('verificarAutenticacao'); // Remove a informação de autenticação.
+    localStorage.removeItem('usuarioDados'); // Remove os dados de registro.
 
-    document.cookie = 'loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-
-    // Redireciona para a página de login após o logout.
-    window.location.href = 'login.html';
+    window.location.href = 'login.html'; // Redireciona para a página de login após o logout.
 });
