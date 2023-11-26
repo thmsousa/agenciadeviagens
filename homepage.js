@@ -1,3 +1,14 @@
+// <----- MENU RESPONSIVO  ----->
+
+function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if(menuMobile.classList.contains('open')) {
+        menuMobileclassList.remove('open');
+    } else {
+        menuMobile.classList.add('open')
+    }
+}
+
 // <----- CARROSSEL DE IMAGENS (HOMEPAGE) ----->
 
 let count = 1;
@@ -14,6 +25,5 @@ function nextImage(){
     if(count > 4){
         count = 1;
     }
-    
     document.getElementById("radio" + count).checked = true;
 }

@@ -25,31 +25,47 @@ body {
   background: url(./imgs/background.jpg) no-repeat fixed center;
   background-size: cover;
   color: var(--color-text);
-  max-width: 1080px;
   margin: 0 auto;
 }
 
-.container {
-  padding: 20px;
-}
-
-header {
+.nav-bar {
   display: flex;
   justify-content: space-between;
+  padding: 1.5rem 6rem;
+}
+
+.nav-list {
+  display: flex;
   align-items: center;
 }
 
-header .logo img {
+.nav-list ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 2px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.logo img {
   width: 50px;
   height: 50px;
   filter: drop-shadow(30px 10px 4px rgb(0, 0, 0, 0.5));
+  align-items: center;
+  display: flex;
+  float: left;
 }
 
-header .logo h3 {
-  width: 50px;
-  height: 50px;
-  float: right;
-  font-size: 20px;
+.logo h3 {
+  font-size: 15px;
   margin-top: 5px;
   filter: drop-shadow(30px 10px 4px rgb(0, 0, 0, 0.5));
 }
@@ -94,6 +110,61 @@ button:hover {
   filter: drop-shadow(0px 2px 3px rgb(0, 0, 0, 0.5));
 }
 
+/* MENU RESPONSIVO */
+
+.mobileMenu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 900px){
+  .nav-bar {
+    padding: 1.5 rem 4rem;
+  }
+
+  .nav-item{
+    display: none;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .mobileMenu-icon {
+    display: block;
+  }
+
+  .mobileMenu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-menu .nav-item{
+    display: block;
+    padding-top: 1.2rem;
+  }
+
+  .mobile-menu .button {
+    width: 100%;
+  }
+
+  .open {
+    display: block;
+  }
+
+}
+
 main {
   padding-top: 60px;
   max-width: 1000px;
@@ -116,7 +187,6 @@ main {
   font-size: 15px;
 }
 
-
 #mainTitle {
   padding-top: 5px;
 }
@@ -125,7 +195,6 @@ main {
   padding-top: 60px;
   padding-bottom: 10px;
 }
-
 
 .title h3{
   display: flex;
@@ -140,48 +209,6 @@ main {
   padding-top: 50px;
 }
 
-.search {
-  background-color: var(--color-text);
-  opacity: 0.9;
-  border-radius: 15px;
-  width: 80%;
-  padding: 25px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-label {
-  color: #000;
-}
-
-#locations, #hotel, #range {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  padding-bottom: 10px;
-  display: flex;
-  align-items: flex-start;
-}
-
-select {
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 25px;
-}
-
-.button-search {
-  padding-left: 20px;
-}
-
-#button-search {
-  padding: 35px;
-  opacity: 0.8;
-}
-
 button:hover {
   cursor: pointer;
 }
@@ -191,41 +218,6 @@ button img {
   height: 30px;
 }
 
-@media screen and (max-width: 700px) {
-  header {
-    display: flex;
-    flex-direction: column;
-  }
-
-  header img {
-    display: none;
-  }
-
-  header .menu {
-    padding-bottom: 40px;
-  }
-
-  main {
-    padding-top: 100px;
-  }
-
-  .search {
-    display: flex;
-    flex-direction: column;
-    padding-top: 0;
-  }
-
-  label {
-    padding-top: 20px;
-  }
-
-  .bottom-main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-}
 
   /* CARROSSEL (HOMEPAGE) */
 
@@ -235,12 +227,14 @@ button img {
   height: 400px;
   overflow: hidden;
   border-radius: 20px;
+  margin-bottom: 40px;
 }
 
 .slides{
   width: 400%;
   height: 400px;
   display: flex;
+  
 }
 
 .slides input {
@@ -335,26 +329,26 @@ button img {
 
 /* FORMULARIO (CADASTRO)*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
-
 
 .container2 {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid;
-  width: 50%;
+  border: 4px solid #cfc9c9;
+  width: 30%;
   margin: 0 auto;
-  margin-top: 5px;
+  margin-bottom: 40px;
 }
 
 .headerreg {
-  padding: 20px 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .headerreg h2 {
-  font-weight: 600;
-  color:#0011fc;
-  font-size: 19px;
+  color: #0011fc;
+  font-size: 22px;
 }
 
 .form {
@@ -370,14 +364,14 @@ button img {
 .form-control label {
   display: inline-block;
   margin-bottom: 0px;
-  color:#0011fc;
+  color:#ffffff;
   display: flex;
   font-weight: bold;
 }
 
 .form-control input {
   border: 2px solid #000000;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   border-radius: 7px;
   outline: 0;
   display: block;
@@ -414,7 +408,7 @@ button img {
 
 .form-control i {
   position: absolute;
-  top: 45px;
+  top: 5px;
   right: 10px;
   visibility: hidden;
 }
@@ -424,7 +418,10 @@ button img {
   position: absolute;
   margin-top: 5px;
   font-size: 14px;
+}
 
+.form-control img {
+  margin-top: -50px;
 }
 
 .form button {
@@ -450,19 +447,21 @@ button img {
 .container3 {
   background-color: #ffffff;
   border-radius: 10px;
-  border: 2px solid;
-  width: 50%;
+  border: 4px solid #cfc9c9;
+  width: 30%;
   margin: 0 auto;
   margin-top: 70px;
 }
 
 .headerreg3 {
-  padding: 20px 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .headerreg3 h2 {
-  font-weight: 600;
-  color:#0011fc;
+  color: #0011fc;
   font-size: 22px;
 }
 
@@ -477,7 +476,6 @@ button img {
 }
 
 .form-control label {
-  display: inline-block;
   margin-bottom: 0px;
   color:#0011fc;
   display: flex;
@@ -485,7 +483,7 @@ button img {
 }
 
 .form-control input {
-  border: 2px solid #0011fc;
+  border: 2px solid #cfc9c9;;
   background-color: #f0f0f0;
   border-radius: 7px;
   display: block;
@@ -568,8 +566,10 @@ button img {
 .containerPAR {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
+  margin-left: 100px;
   display: inline-block;
   vertical-align: top;
 }
@@ -578,6 +578,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerPAR select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerPAR {
@@ -629,9 +635,10 @@ button img {
 .containerNY {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
-  margin-left: 25px;
+  margin-left: 55px;
   display: inline-block;
   vertical-align: top;
 }
@@ -640,6 +647,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerNY select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerNY {
@@ -692,9 +705,10 @@ button img {
 .containerATE {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
-  margin-left: 25px;
+  margin-left: 55px;
   display: inline-block;
   vertical-align: top;
 }
@@ -703,6 +717,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerATE select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerATE {
@@ -762,8 +782,10 @@ button img {
 .containerBAN {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
+  margin-left: 100px;
   margin-top: 40px;
   display: inline-block;
   vertical-align: top;
@@ -773,6 +795,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerBAN select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerBAN {
@@ -815,7 +843,6 @@ button img {
   padding: 8px;
 }
 
-
 .containerBAN div {
   color: #000000;
   margin-top: 15px;
@@ -824,10 +851,11 @@ button img {
 .containerBER {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
   margin-top: 40px;
-  margin-left: 25px;
+  margin-left: 55px;
   display: inline-block;
   vertical-align: top;
 }
@@ -836,6 +864,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerBER select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerBER {
@@ -878,7 +912,6 @@ button img {
   padding: 8px;
 }
 
-
 .containerBER div {
   color: #000000;
   margin-top: 15px;
@@ -888,9 +921,10 @@ button img {
 .containerCAI {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
-  margin-left: 25px;
+  margin-left: 55px;
   margin-top: 40px;
   display: inline-block;
   vertical-align: top;
@@ -900,6 +934,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerCAI select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerCAI {
@@ -958,9 +998,11 @@ button img {
 .containerLON {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
   margin-top: 40px;
+  margin-left: 100px;
   display: inline-block;
   vertical-align: top;
 }
@@ -969,6 +1011,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerLON select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerLON {
@@ -1020,10 +1068,11 @@ button img {
 .containerROM {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
   margin-top: 40px;
-  margin-left: 25px;
+  margin-left: 55px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1032,6 +1081,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerROM select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerROM {
@@ -1084,9 +1139,10 @@ button img {
 .containerSHA {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
-  margin-left: 25px;
+  margin-left: 55px;
   margin-top: 40px;
   display: inline-block;
   vertical-align: top;
@@ -1096,6 +1152,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerSHA select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerSHA {
@@ -1154,9 +1216,11 @@ button img {
 .containerTOK {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
   margin-top: 40px;
+  margin-left: 100px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1165,6 +1229,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerTOK select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerTOK {
@@ -1215,10 +1285,11 @@ button img {
 .containerDUB {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
   margin-top: 40px;
-  margin-left: 25px;
+  margin-left: 55px;
   display: inline-block;
   vertical-align: top;
 }
@@ -1227,6 +1298,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerDUB select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerDUB {
@@ -1278,9 +1355,10 @@ button img {
 .containerCUS {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 30%;
+  border: 4px solid #e0d9d9;
+  width: 25%;
   margin: 10px;
-  margin-left: 25px;
+  margin-left: 55px;
   margin-top: 40px;
   display: inline-block;
   vertical-align: top;
@@ -1290,6 +1368,12 @@ button img {
   border: 2px solid #0011fc;
   border-radius: 15px;
   margin-top: 15px;
+}
+
+.containerCUS select {
+  border-radius: 5px;
+  border: #ffffff;
+  background-color: #e0d9d9;
 }
 
 .containerCUS {
@@ -1344,6 +1428,7 @@ button img {
     margin-top: 10px;
 }
 
+
 /* SOBRE E CONTATO */
 
 .headerabout {
@@ -1368,8 +1453,12 @@ button img {
   color: #0011fc;
 }
 
+.mainabout p {
+  color: #ffffff;
+}
+
 .footerabout footer {
- 
+  background-color: #0011fc;
   color: #fff;
   text-align: center;
   padding: 10px 0;

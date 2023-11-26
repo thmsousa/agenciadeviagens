@@ -1,36 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacotes</title>
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacotes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="imgs/plane-icon.svg">
 </head>
 <body>
-    <div class="container">
-        <header>
-          <div class="logo">
-            <img src="imgs/plane-icon.svg" alt="">
-            <h3>TravelWorld</h3>
-          </div>
-    
-          <div class="menu">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="pacotes.html">Pacotes</a></li>
-              <li><a href="about.html">Sobre</a></li>
-              
-            </ul>
-          </div>
-    
-          <div class="button">
-            <button id="logoutButton">Sair</button>
-          </div>
-        </header>
-    </div>
+    <header>
+      <nav class="nav-bar">
+        <div class="logo">
+          <img src="imgs/plane-icon.svg" alt="logo">
+          <h3>Mundo Fronteira</h3>
+        </div>
+
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="pacotes.html" class="nav-link">Pacotes</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">Sobre</a></li>
+          </ul>
+        </div>
+
+        <div class="button">
+          <button id="logoutButton">Sair</button>
+        </div>
+
+        <div class="mobileMenu-icon">
+            <button onclick="menuShow"><img class="icon" src="imgs/menuMobile-icon.svg" alt="menuicon"></button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu">
+        <ul>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="pacotes.html" class="nav-link">Pacotes</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">Sobre</a></li>
+        </ul>
+
+        <div class="button">
+          <button>
+            <a href="register.html">Cadastro</a>
+          </button>
+        </div>
+
+      </div>
+    </header>
 
       <main>
         <div class="top-main">

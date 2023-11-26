@@ -5,31 +5,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rocket Travel</title>
+  <title>Mundo Fronteira</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="imgs/plane-icon.svg">
 </head>
 
 <body>
-  <div class="container">
     <header>
-      <div class="logo">
-        <img src="imgs/plane-icon.svg" alt="">
-        <h3>Mundo Fronteira</h3>
-      </div>
+      <nav class="nav-bar">
+        <div class="logo">
+          <img src="imgs/plane-icon.svg" alt="logo">
+          <h3>Mundo Fronteira</h3>
+        </div>
 
-      <div class="menu">
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="pacotes.html" class="nav-link">Pacotes</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">Sobre</a></li>
+          </ul>
+        </div>
+
+        <div class="button">
+          <button>
+            <a href="register.html">Cadastro</a>
+          </button>
+        </div>
+
+        <div class="mobileMenu-icon">
+            <button onclick="menuShow"><img class="icon" src="imgs/menuMobile-icon.svg" alt="menuicon"></button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu">
         <ul>
-          <li><a href="indexref.html">Home</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="pacotes.html">Pacotes</a></li>
-          <li><a href="about.html">Sobre</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="pacotes.html" class="nav-link">Pacotes</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">Sobre</a></li>
         </ul>
-      </div>
 
-      <div class="button">
-        <button>
-          <a href="register.html">Cadastro</a>
-        </button>
+        <div class="button">
+          <button>
+            <a href="register.html">Cadastro</a>
+          </button>
+        </div>
+
       </div>
     </header>
 
@@ -60,16 +82,24 @@
         <input type="radio" name="radiobtn" id="radio4">
 
         <div class="slide first">
-          <img src="imgs/carrossel_roma.jpg" alt="Imagem 1">
+          <a href="pacotes.html">
+            <img src="imgs/carrossel_roma.jpg" alt="Imagem 1">
+          </a>
         </div>
         <div class="slide">
-          <img src="imgs/carrossel_paris.jpg" alt="Imagem 2">
+          <a href="pacotes.html">
+            <img src="imgs/carrossel_paris.jpg" alt="Imagem 2">
+          </a>
         </div>
         <div class="slide">
-          <img src="imgs/carrossel_cairo.jpg" alt="Imagem 3">
+          <a href="pacotes.html">
+            <img src="imgs/carrossel_cairo.jpg" alt="Imagem 3">
+          </a>
         </div>
         <div class="slide">
-          <img src="imgs/carrossel_tokyo.jpg" alt="Imagem 4">
+          <a href="pacotes.html">
+            <img src="imgs/carrossel_tokyo.jpg" alt="Imagem 4">
+          </a>
         </div>
 
         <div class="navigation">

@@ -7,6 +7,8 @@ if (!verificarAutenticacao) {
     alert('Você precisa estar logado para acessar esse conteúdo.');
 }
 
+// <----- CALCULADORA  ----->
+
 // Função para calcular o custo da viagem.
 function calcularCusto(precoId, destinationId, stayDurationId, numPeopleId, accommodationId) {
 
