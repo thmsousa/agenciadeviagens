@@ -19,3 +19,14 @@ const imagemCompartilhar = document.getElementById('imagem-compartilhar');
     } else {
       imagemCompartilhar.style.display = 'none';
     }
+
+// <----- MENU RESPONSIVO  ----->
+
+function menuShow() {
+  let menuMobile = document.querySelector('.mobile-menu');
+  if(menuMobile.classList.contains('open')) {
+      menuMobileclassList.remove('open');
+  } else {
+      menuMobile.classList.add('open')
+  }
+}

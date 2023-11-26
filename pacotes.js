@@ -60,3 +60,15 @@ logoutButton.addEventListener('click', function() {
 
     window.location.href = 'login.html'; // Redireciona para a página de login após o logout.
 });
+
+
+// <----- MENU RESPONSIVO  ----->
+
+function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if(menuMobile.classList.contains('open')) {
+        menuMobileclassList.remove('open');
+    } else {
+        menuMobile.classList.add('open')
+    }
+}
