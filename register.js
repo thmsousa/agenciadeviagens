@@ -26,54 +26,54 @@ function registroValidacao() {
 
     // Valida o nome.
     if(usernameValue === '') {
-        // mostrar erro
+        // Mostrar erro se o campo estiver vazio.
         setErrorFor(username, 'Preencha esse campo.')
         return false;
     } else {
-        // adicionar a classe de sucesso
+        // Informação correta.
         setSuccessFor(username)
     }
 
     // Valida o e-mail.
     if(emailValue === '') {
-        // mostrar erro
+        // Mostrar erro se o campo estiver vazio.
         setErrorFor(email, 'Preencha esse campo.')
         return false;
     } else if (!isEmail(emailValue)) {
+        // Mostrar erro ao inserir menos o email sem estar de acordo com o padrão estbaelecido.
         setErrorFor(email, 'Email inválido.')
         return false;
     } else {
-        // adicionar a classe de sucesso
+        // Informação correta.
         setSuccessFor(email)
     }
 
-    // Valida o a senha.
+    // Valida a senha.
     if(passwordValue === '') {
-        // mostrar erro
+        // Mostrar erro se o campo estiver vazio.
         setErrorFor(password, 'Preencha esse campo.')
         return false;
-
     } else if(passwordValue.length < 8) { 
+        // Mostrar erro ao inserir menos que 8 caracteres.
         setErrorFor(password, 'Senha deve ter mais que 8 caracteres.')
         return false;
     } else {
-        // adicionar a classe de sucesso
+        // Informação correta.
         setSuccessFor(password)
     }
 
     // Valida a confirmação da senha.
-
     if(passwordtwoValue === '') {
-        // mostrar erro
-        // add classe
+        // Mostrar erro se o campo estiver vazio.
         setErrorFor(passwordtwo, 'Preencha esse campo.')
         return false;
 
     } else if(passwordValue !== passwordtwoValue) { 
+        // Mostrar erro se o campo não for preenchido por uma senha igual.
         setErrorFor(passwordtwo, 'Senhas não estão iguais.')
         return false;
     } else {
-        // adicionar a classe de sucesso
+        // Informação correta.
         setSuccessFor(passwordtwo)
     }
 

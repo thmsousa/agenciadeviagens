@@ -15,8 +15,8 @@ form.addEventListener('submit', (e) => {
             window.location.href = 'pacotes.html';
         } else {
             // Login não executado, exibir mensagem de erro.
-            setErrorFor(email, 'Credenciais inválidas');
-            setErrorFor(password, 'Credenciais inválidas');
+            setErrorFor(email, 'Credenciais inválidas.');
+            setErrorFor(password, 'Credenciais inválidas.');
         }
     }
 });
@@ -29,27 +29,29 @@ function loginValidacao() {
 
     // Verifica o email.
     if(emailValue === '') {
-        //Se estiver vazio, será mostrado uma mensagem.
+        //Se estiver vazio, será mostrado uma mensagem de erro.
         setErrorFor(email, 'Preencha esse campo.')
         return false;
     } else if (!isEmail(emailValue)) {
+        // Mostrar erro ao inserir menos o email sem estar de acordo com o padrão estbaelecido.
         setErrorFor(email, 'E-mail inválido.')
         return false;
     } else {
-        // adicionar a classe de sucesso
+        // Informação correta.
         setSuccessFor(email)
     }
 
     // Verifica a senha.
     if(passwordValue === '') {
-        // mostrar erro
+        //Se estiver vazio, será mostrado uma mensagem de erro.
         setErrorFor(password, 'Preencha esse campo.')
         return false;
+        // Mostrar erro ao inserir menos que 8 caracteres.
     } else if(passwordValue.length < 8) { 
         setErrorFor(password, 'Senha deve ter mais que 8 caracteres.')
         return false;
     } else {
-        // adicionar a classe de sucesso.
+        // Informação correta.
         setSuccessFor(password)
     }
 

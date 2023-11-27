@@ -24,6 +24,7 @@ function nextImage(){
     count++;
     if(count > 4){
         count = 1;
+        // Se a contagem for maior que 4, o contador voltará para 1, reiniciando os slides.
     }
     document.getElementById("radio" + count).checked = true;
 }

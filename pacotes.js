@@ -33,10 +33,10 @@ function calcularCusto(precoId, destinationId, stayDurationId, numPeopleId, acco
         cusco: 1445,
     };
 
-    // Lógica de cálculo do preço base
+    // Lógica de cálculo do preço base.
     let precoBase = precosBase[destination] || 0;
 
-    // Lógica de cálculo do custo total com base no tipo de acomodação
+    // Lógica de cálculo do custo total com base no tipo de acomodação;
     if (accommodation === "hotel") {
         precoBase += 500;
     } else if (accommodation === "apartment") {
@@ -44,7 +44,7 @@ function calcularCusto(precoId, destinationId, stayDurationId, numPeopleId, acco
     }
     // o preco da acomodação é adicionada ao preço base do destino. Ou seja, precoBase = precoBase + acomdação, então a partir desse valor calcula-se o custo total. 
 
-    // Cálculo do custo total
+    // Cálculo do custo total.
     const custoTotal = precoBase * stayDuration * numPeople;
 
     // Atualiza a página com o custo final.
@@ -56,7 +56,7 @@ const logoutButton = document.getElementById('logoutButton');
 
 logoutButton.addEventListener('click', function() {
     localStorage.removeItem('verificarAutenticacao'); // Remove a informação de autenticação.
-    localStorage.removeItem('usuarioDados'); // Remove os dados de registro.
+    localStorage.removeItem('usuarioDados'); // Remove os dados de cadastro.
 
     window.location.href = 'login.html'; // Redireciona para a página de login após o logout.
 });

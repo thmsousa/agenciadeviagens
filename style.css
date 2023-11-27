@@ -337,6 +337,7 @@ button img {
   width: 30%;
   margin: 0 auto;
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .headerreg {
@@ -443,7 +444,6 @@ button img {
 
 /* FORMULARIO (LOGIN) */
 
-
 .container3 {
   background-color: #ffffff;
   border-radius: 10px;
@@ -451,7 +451,8 @@ button img {
   width: 30%;
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 30px;
+  margin-bottom: 85px;
 }
 
 .headerreg3 {

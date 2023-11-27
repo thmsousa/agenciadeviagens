@@ -5,7 +5,7 @@ const imagemCompartilhar = document.getElementById('imagem-compartilhar');
       imagemCompartilhar.addEventListener('click', async () => {
         try {
           await navigator.share({
-            title: 'Mundo Fronteira',
+            title: 'Mundo Fronteira.',
             text: 'Mundo Fronteira.',
             url: 'https://about.html',
           });
@@ -15,7 +15,7 @@ const imagemCompartilhar = document.getElementById('imagem-compartilhar');
         }
       });
 
-       // Esconde a imagem se a API não for suportada
+       // Esconde a imagem se a API não for suportada.
     } else {
       imagemCompartilhar.style.display = 'none';
     }
