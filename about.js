@@ -1,4 +1,4 @@
-// <----- COMPARTILHAMENTO  ----->
+// <----- COMPARTILHAMENTO ----->
 const imagemCompartilhar = document.getElementById('imagem-compartilhar');
 
     if (navigator.share) {

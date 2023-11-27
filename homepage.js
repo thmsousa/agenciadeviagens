@@ -14,7 +14,7 @@ function menuShow() {
 let count = 1;
 document.getElementById("radio1").checked = true;
 
-// setInterval para as imagens passarem infinitamente.
+// setInterval para as imagens passarem.
 setInterval(function() {
     nextImage();
 }, 4000)
